@@ -22,17 +22,26 @@
 // ==/UserScript==
 
 var currentSite = window.location.href
-var stringToReplace = "//smile.amazon.com" 
+var stringToReplace = "//smile.amazon.com/" 
 
 function doLoad() {
-		if (currentSite.indexOf("//amazon.com") >= 0 {
-			var newSite = currentSite.replace('https://amazon.com/', stringToReplace);
+		if (currentSite.indexOf("//www.amazon.com") >= 0 {
+			var newSite = currentSite.replace('https://www.amazon.com/', stringToReplace);
 			window.location.href = newSite
 			GM_log("Successfully Switched to AmazonSmile. :)");
 			
-		else if (currentSite.indexOf("//smile.amazon.com") >= 0 {
+		else if (currentSite.indexOf("//www.smile.amazon.com") >= 0 {
 			void(0);
 			GM_log("Thanks for making us Smile w/ Amazon. :)");
+		else if (currentSite.indexOf("//amazon.com") >= 0 {
+			 var newSite = currentSite.replace('https://amazon.com/', stringToReplace);
+			 window.location.href = newSite
+			 GM_log("Successfully Switched to AmazonSmile. :)");
+		else if (currentSite.indexOf("//smile.amazon.com") >= 0 {
+			 var newSite = currentSite.replace('https://smile.amazon.com/', stringToReplace);
+			 window.location.href = newSite
+			 GM_Log("Thanks for Making us Smile w/ Amazon. :)");
+		}	
 }
 
 window.onload = doLoad;
