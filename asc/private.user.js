@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name AmazonSmile Convertor
-// @version 1.0
+// @version 1.1
 // @author SlipSerum
 // @description Redirects Amazon.com links to AmazonSmile Links
 // @homepage http://code.gvsg.cf/asc
